@@ -55,4 +55,4 @@ push-to-ecr:
       aws-secret-key: $AWS_SECRET_ACCESS_KEY
       aws-region: $AWS_REGION
       aws-registry-id: $AWS_REGISTRY_ID
-      repository: 363629143271.dkr.ecr.eu-central-1.amazonaws.com/wercker-counter
+      repository: wercker-counter
