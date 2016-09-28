@@ -47,10 +47,11 @@ deploy:
       task-definition-name: wercker-counter
       task-definition-file: /app/wercker-app.json
       minimum-running-tasks: 1
-push-to-ecr:
+push-debug-ecr:
   steps:
     - internal/docker-push:
-      registry: https://363629143271.dkr.ecr.eu-central-1.amazonaws.com/wercker-counter
+      ports: 8000
+      tag: debug-$WERCKER_BRANCH_NAME
       aws-access-key: $AWS_ACCESS_KEY_ID
       aws-secret-key: $AWS_SECRET_ACCESS_KEY
       aws-region: $AWS_REGION
