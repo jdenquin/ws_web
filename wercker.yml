@@ -50,8 +50,9 @@ deploy:
 push-to-ecr:
   steps:
     - internal/docker-push:
+      registry: https://363629143271.dkr.ecr.eu-central-1.amazonaws.com/wercker-counter
       aws-access-key: $AWS_ACCESS_KEY_ID
       aws-secret-key: $AWS_SECRET_ACCESS_KEY
       aws-region: $AWS_REGION
       aws-registry-id: $AWS_REGISTRY_ID
-      repository: ws_web
+      repository: 363629143271.dkr.ecr.eu-central-1.amazonaws.com/wercker-counter
