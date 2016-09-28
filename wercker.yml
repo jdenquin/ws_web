@@ -51,7 +51,7 @@ push-debug-ecr:
   steps:
     - internal/docker-push:
       ports: 8000
-      tag: debug-$WERCKER_BRANCH_NAME
+      tag: $WERCKER_GIT_REPOSITORY-$WERCKER_BRANCH_NAME
       aws-access-key: $AWS_ACCESS_KEY_ID
       aws-secret-key: $AWS_SECRET_ACCESS_KEY
       aws-region: $AWS_REGION
